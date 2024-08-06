@@ -23,16 +23,29 @@
 // }
 
 
-function verificarIdade(idade) {
-    if (idade < 18 ){
-        throw Error("Idade deve ser maior que 18");
+// function verificarIdade(idade) {
+//     if (idade < 18 ){
+//         throw Error("Idade deve ser maior que 18");
+//     }
+
+//     return "Idade Correta";
+// }
+
+// try {
+//     console.log(verificarIdade(19));
+// } catch (error) {
+//     console.log(error);
+// }
+
+const minhaPromisse = new Promise((resolve, reject) => {
+    let sucesso = false;
+    if (sucesso){
+        resolve('Operação bem sucedida');
+    } else {
+        reject('Ocorreu um erro');
     }
+});
 
-    return "Idade Correta";
-}
-
-try {
-    console.log(verificarIdade(19));
-} catch (error) {
-    console.log(error);
-}
+minhaPromisse.then(value => {
+        console.log(value);
+}).catch( error => console.log(error));
