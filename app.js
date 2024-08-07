@@ -37,15 +37,26 @@
 //     console.log(error);
 // }
 
-const minhaPromisse = new Promise((resolve, reject) => {
-    let sucesso = false;
-    if (sucesso){
-        resolve('Operação bem sucedida');
-    } else {
-        reject('Ocorreu um erro');
-    }
-});
+// const minhaPromisse = new Promise((resolve, reject) => {
+//     let sucesso = false;
+//     if (sucesso){
+//         resolve('Operação bem sucedida');
+//     } else {
+//         reject('Ocorreu um erro');
+//     }
+// });
 
-minhaPromisse.then(value => {
-        console.log(value);
-}).catch( error => console.log(error));
+// minhaPromisse.then(value => {
+//         console.log(value);
+// }).catch( error => console.log(error));
+
+async function saudacao(){
+    return "Olá, sejam bem vindos!";
+}
+
+async function obterMensagem(){
+    const msg = await saudacao();
+    console.log(msg);
+}
+
+obterMensagem();
