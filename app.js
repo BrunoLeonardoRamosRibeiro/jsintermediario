@@ -1,62 +1,13 @@
+// importar o express e o cors
+const express = require('express');
+var cors = require('cors')
 
-// // Funções tradicionais
-// function saudacao(){
-//     console.log(this.mensagem);
-// }
+// criamos o objeto express
+const myApp = express();
 
-// const  exibir = ()=> console.log(this);
+myApp.use(cors());
+myApp.use(express.json());
 
-// const obj = {
-//     mensagem: "Bem vindo!",
-//     exibirArrow: exibir,
-// }
+const porta = 3000;
 
-// obj.exibirArrow();
-
-// TRY CATCH
-// try {
-//     console.log(varivale);
-// } catch (error) {
-//     console.log('Ocorreu um erro');
-// } finally {
-//     console.log('Finalizado');
-// }
-
-
-// function verificarIdade(idade) {
-//     if (idade < 18 ){
-//         throw Error("Idade deve ser maior que 18");
-//     }
-
-//     return "Idade Correta";
-// }
-
-// try {
-//     console.log(verificarIdade(19));
-// } catch (error) {
-//     console.log(error);
-// }
-
-// const minhaPromisse = new Promise((resolve, reject) => {
-//     let sucesso = false;
-//     if (sucesso){
-//         resolve('Operação bem sucedida');
-//     } else {
-//         reject('Ocorreu um erro');
-//     }
-// });
-
-// minhaPromisse.then(value => {
-//         console.log(value);
-// }).catch( error => console.log(error));
-
-async function saudacao(){
-    return "Olá, sejam bem vindos!";
-}
-
-async function obterMensagem(){
-    const msg = await saudacao();
-    console.log(msg);
-}
-
-obterMensagem();
+myApp.listen(porta, ()=> {console.log('Servidor Rodando...')});

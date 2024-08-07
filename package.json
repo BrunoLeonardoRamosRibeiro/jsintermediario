@@ -1,0 +1,17 @@
+{
+  "name": "jsintermediario",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "API utilizada para ser consumida por aplicativo Flutter",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "express-cors": "^0.0.3"
+  }
+}
