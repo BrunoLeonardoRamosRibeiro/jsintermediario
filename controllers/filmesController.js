@@ -39,7 +39,7 @@ const deletarFilme = (req, res) => {
         const { id } = req.params;
         const filmeRemovido = filmesService.deletarFilme(id);
         if (filmeRemovido) {
-            res.json(filmeRemovido);
+            res.status(204).json(filmeRemovido);
         } else {
             res.status(404).json({ msg: "Filme não encontrado" });
         }
